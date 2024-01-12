@@ -15,7 +15,6 @@ public class Main {
         }while (wybor != 0);
     }
     private static void menuInfo(){
-        System.out.println("--------------------------------------------------------------------------------------------");
         System.out.println("1) Dodanie spotkania na wybrany dzien");
         System.out.println("2) Dodanie Zadania na wybrany dzien");
         System.out.println("3) usuniecie podanego spotkania w danym dniu");
@@ -27,7 +26,6 @@ public class Main {
         System.out.println("9) Wyswietlenie Spotkan w wybranym dniu o wybranym priorytecie i zaczynajacych sie pozniej niz podany czas");
         System.out.println("10) Wyswietlenie Zadan w wybranym dnniu o wybranym statusie konczacych sie nie wczesniej niz do podanego czasu ");
         System.out.println("0) exit");
-        System.out.println("--------------------------------------------------------------------------------------------");
     }
     private static void menu(Scanner scanner, int wybor,  Kalendarz kalendarz){
         switch (wybor){
@@ -56,7 +54,7 @@ public class Main {
                 show(kalendarz.filtrListBy(a -> a instanceof Zadanie && (a.getCzasPoczatku().isBefore(koniec) || a.getCzasKonca().equals(koniec)) && ((Zadanie) a).getStatus().equalsIgnoreCase(status),ktoryDzien(scanner)));
             }
 
-            case 0 -> System.out.println("bye!");
+            case 0 -> System.out.println("bye  bye!");
             default -> System.out.println("zla wartosc");
         }
     }
